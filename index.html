@@ -10,7 +10,9 @@
     <button id="sendBtn">send</button>
     <div id="recv"></div>
 <script>
-    var websocket = new WebSocket("ws://echo.websocket.org/")
+    url1 = "ws://echo.websocket.org/"
+    url2 = "ws://localhost:8001/"
+    var websocket = new WebSocket(url2)
     websocket.onopen = function () {
         document.getElementById("recv").innerHTML = "Connect"
     }
